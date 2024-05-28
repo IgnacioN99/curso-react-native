@@ -1,3 +1,4 @@
+import {StyledWhiteText} from '@navigation/styles';
 import styled from 'styled-components/native';
 
 export const StyledCard = styled.View`
@@ -19,10 +20,6 @@ export const StyledDataContainer = styled.View<{$bgcolor: string}>`
   flex: 1;
   border-radius: 15px;
   padding: 10px;
-`;
-
-export const StyledWhiteText = styled.Text`
-  color: '#fff';
 `;
 
 export const StyledNumberText = styled(StyledWhiteText)`

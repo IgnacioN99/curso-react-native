@@ -11,3 +11,7 @@ export const StyledPokeball = styled.Image`
   height: 75px;
   top: -20px;
 `;
+
+export const StyledWhiteText = styled.Text`
+  color: white;
+`;

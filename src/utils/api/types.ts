@@ -15,12 +15,28 @@ export type PokemonResponse = {
 export type PokemonDetail = {
   id: number;
   name: string;
-  type: PokemonColor;
+  types: PokemonDetailType[];
   order: number;
   imagen: string;
+  stats: PokemonStat[];
 };
 
-export type PokemonDetailResponse = {
-  id: number;
+export type PokemonDetailType = {
+  type: PokemonType;
+};
+
+type PokemonType = {
+  name: PokemonColor;
+  url: string;
+};
+
+type PokemonStat = {
+  base_stat: number;
+  effort: number;
+  stat: Stat;
+};
+
+type Stat = {
   name: string;
+  value: number;
 };
