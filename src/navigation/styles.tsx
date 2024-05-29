@@ -2,8 +2,7 @@ import {styled} from 'styled-components/native';
 
 export const StyledContainer = styled.SafeAreaView``;
 
-export const StyledText = styled.Text`
-  font-size: 20px;
+export const StyledBlackText = styled.Text`
   color: black;
 `;
 export const StyledPokeball = styled.Image`

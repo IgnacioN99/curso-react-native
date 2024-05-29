@@ -30,7 +30,7 @@ type PokemonType = {
   url: string;
 };
 
-type PokemonStat = {
+export type PokemonStat = {
   base_stat: number;
   effort: number;
   stat: Stat;

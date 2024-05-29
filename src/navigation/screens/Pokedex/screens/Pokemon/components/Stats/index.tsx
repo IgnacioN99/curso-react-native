@@ -1,11 +1,16 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {StatsProps} from './types';
+import {StyledStatsContainer, StyledStatsTitle} from './styles';
+import Stat from './components/Stat';
 
-const Stats = () => {
+const Stats = ({stats}: StatsProps) => {
   return (
-    <View>
-      <Text>Stats</Text>
-    </View>
+    <StyledStatsContainer>
+      <StyledStatsTitle>Stats</StyledStatsTitle>
+      {stats.map((stat, index) => (
+        <Stat key={index} stat={stat} />
+      ))}
+    </StyledStatsContainer>
   );
 };
 

@@ -5,6 +5,7 @@ import {getPokemonDetailByID} from '@utils/api';
 import {ScrollView} from 'react-native';
 import Header from './components/Header';
 import TypePills from './components/TypePills';
+import Stats from './components/Stats';
 
 const PokemonScreen = ({route}: {route: PokemonScreenNavigationProp}) => {
   const [pokemon, setPokemon] = useState<PokemonDetail>();
@@ -28,6 +29,7 @@ const PokemonScreen = ({route}: {route: PokemonScreenNavigationProp}) => {
     <ScrollView>
       <Header pokemon={pokemon} />
       <TypePills types={pokemon.types} />
+      <Stats stats={pokemon.stats} />
     </ScrollView>
   );
 };
