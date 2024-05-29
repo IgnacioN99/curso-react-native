@@ -17,7 +17,7 @@ const PokemonCard = ({pokemon}: PokemonCardProps) => {
   const goToPokemon = () => {
     navigation.navigate('Pokemon', {id: pokemon.id});
   };
-  const pokemonColor = getTypeColor(pokemon.type);
+  const pokemonColor = getTypeColor(pokemon.types[0].type.name);
   return (
     <TouchableWithoutFeedback onPress={goToPokemon}>
       <StyledCard>

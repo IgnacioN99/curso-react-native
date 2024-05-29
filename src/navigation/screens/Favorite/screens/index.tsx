@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyledContainer, StyledText} from '../../../styles';
+import {StyledContainer, StyledBlackText} from '../../../styles';
 
 const HeartScreen = () => {
   return (
     <StyledContainer>
-      <StyledText>HeartScreen</StyledText>
-      <StyledText>HeartScreen</StyledText>
-      <StyledText>HeartScreen</StyledText>
+      <StyledBlackText>HeartScreen</StyledBlackText>
+      <StyledBlackText>HeartScreen</StyledBlackText>
+      <StyledBlackText>HeartScreen</StyledBlackText>
     </StyledContainer>
   );
 };

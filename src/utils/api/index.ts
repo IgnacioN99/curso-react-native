@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {PokemonDetail, PokemonDetailResponse, PokemonResponse} from './types';
+import {PokemonDetail, PokemonResponse} from './types';
 
 export const API_URL = 'https://pokeapi.co/api/v2';
 
@@ -35,9 +35,10 @@ export const loadPokemons = async (url: string | null) => {
           const pokemonDetail: PokemonDetail = {
             id: detail.id,
             name: detail.name,
-            type: detail.types[0].type.name,
+            types: detail.types,
             order: detail.order,
             imagen: detail.sprites.other['official-artwork'].front_default,
+            stats: detail.stats,
           };
           return pokemonDetail;
         }),
@@ -52,8 +53,16 @@ export const loadPokemons = async (url: string | null) => {
 export const getPokemonDetailByID = async (id: number) => {
   try {
     const url = `${API_URL}/pokemon/${id}`;
-    const response = await axios.get<PokemonDetailResponse>(url);
-    return response;
+    const response = await axios.get(url);
+    const detail: PokemonDetail = {
+      id: response.data.id,
+      name: response.data.name,
+      types: response.data.types,
+      order: response.data.order,
+      imagen: response.data.sprites.other['official-artwork'].front_default,
+      stats: response.data.stats,
+    };
+    return detail;
   } catch (error) {
     throw error;
   }

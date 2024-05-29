@@ -23,7 +23,6 @@ const Pokedex = () => {
           title: '',
           headerShown: true,
           headerTransparent: true,
-          headerShadowVisible: false,
         }}
       />
     </Stack.Navigator>

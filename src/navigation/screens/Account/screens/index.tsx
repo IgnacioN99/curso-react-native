@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyledContainer, StyledText} from '../../../styles';
+import {StyledContainer, StyledBlackText} from '../../../styles';
 
 const AccountScreen = () => {
   return (
     <StyledContainer>
-      <StyledText>FavoriteScreen</StyledText>
-      <StyledText>FavoriteScreen</StyledText>
-      <StyledText>FavoriteScreen</StyledText>
+      <StyledBlackText>FavoriteScreen</StyledBlackText>
+      <StyledBlackText>FavoriteScreen</StyledBlackText>
+      <StyledBlackText>FavoriteScreen</StyledBlackText>
     </StyledContainer>
   );
 };
